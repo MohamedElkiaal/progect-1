@@ -51,7 +51,7 @@ img {
   margin-top: 30px;
 }
 
-/* ----- Layout Columns (Floats - Pure CSS2) ----- */
+/* ----- Layout Columns (Floats) ----- */
 .col-2 {
   float: left;
   width: 48%;
@@ -152,7 +152,7 @@ img {
   font-size: 22px;
   float: left;
   margin-right: 15px;
-  line-height: 35px;
+  margin-top: 5px;
 }
 
 .search-box {
@@ -191,7 +191,7 @@ img {
   padding: 8px 12px;
   display: block;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .nav-links a:hover {
@@ -300,12 +300,11 @@ img {
 .service-card::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
   top: 0;
   left: 0;
-  background-color: #755da7;
-  opacity: 0.2;
+  width: 0;
+  height: 0;
+  background-color: rgba(117, 93, 167, 0.15);
   transition: width 0.5s ease, height 0.5s ease;
   pointer-events: none;
 }
@@ -366,7 +365,7 @@ img {
   text-align: center;
   padding-top: 60px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
 }
 
 .work-item:hover .work-overlay {
@@ -607,12 +606,11 @@ img {
 .team-card::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
   top: 0;
   left: 0;
-  background-color: #755da7;
-  opacity: 0.2;
+  width: 0;
+  height: 0;
+  background-color: rgba(117, 93, 167, 0.15);
   transition: width 0.5s ease, height 0.5s ease;
   pointer-events: none;
 }
@@ -689,14 +687,14 @@ img {
 .news-card::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
   top: 0;
   left: 0;
-  background-color: #755da7;
-  opacity: 0.15;
+  width: 0;
+  height: 0;
+  background-color: rgba(117, 93, 167, 0.15);
   transition: width 0.5s ease, height 0.5s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
 .news-card:hover::after {
@@ -709,6 +707,8 @@ img {
   height: 200px;
   object-fit: cover;
   margin-bottom: 15px;
+  position: relative;
+  z-index: 5;
 }
 
 .news-meta {
